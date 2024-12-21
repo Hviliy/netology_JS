@@ -1,0 +1,33 @@
+{
+  "name": "rpg-game",
+  "version": "1.0.0",
+  "description": "THE game",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hviliy/netology_JS.git"
+  },
+  "keywords": [
+    "game",
+    "rpg",
+    "myasorubka"
+  ],
+  "author": "Danila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hviliy/netology_JS/issues"
+  },
+  "homepage": "https://github.com/Hviliy/netology_JS#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0"
+  },
+  "dependencies": {
+    "core-js": "^3.39.0"
+  }
+}
