@@ -44,7 +44,7 @@ document.getElementById('addPlayer').addEventListener('click', () => {
             break;
         default:
             /* eslint-disable no-alert */
-            alert('Неизвестный класс!');z
+            alert('Неизвестный класс!');
             /* eslint-enable no-alert */
             return;
     }
