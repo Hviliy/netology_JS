@@ -1,4 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    color: #999;
-    font-family: sans-serif;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #222, #444);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header__title {
+    font-size: 1.5rem;
+    color: #ffb03b;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #646cff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #535bf2;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+#battleLog {
+    border: 1px solid #666;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.message {
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}
+
+.message.green {
+    color: #19c69e;
+}
+
+.message.red {
+    color: #ff4c4c;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    background-color: rgba(0,0,0,0.3);
 }

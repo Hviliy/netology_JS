@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8" />
-    <title>RPG Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Мясорубка</title>
 </head>
+
 <body>
-<h1>RPG Game</h1>
-<div id="root"></div>
+<header class="header">
+    <h3 class="header__title">Мясорубка</h3>
+    <div class="actions">
+        <div class="create-player">
+            <label>
+                Выберите класс:
+                <select id="playerClass">
+                    <option value="archer">Лучник</option>
+                    <option value="warrior">Воин</option>
+                    <option value="mage">Маг</option>
+                    <option value="dwarf">Гном</option>
+                    <option value="crossbowman">Арбалетчик</option>
+                    <option value="demourge">Демиург</option>
+                </select>
+            </label>
+
+            <label>
+                Имя персонажа:
+                <input type="text" id="playerName" placeholder="Введите имя" />
+            </label>
+
+            <button id="addPlayer">Добавить персонажа</button>
+        </div>
+        <button id="clearLog">Очистить лог</button>
+        <button id="startBattle">Начать бойню</button>
+    </div>
+    <div id="battleLog"></div>
+</header>
+
+<main class="main">
+</main>
+
+<footer class="footer">
+    &copy; 2024
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>

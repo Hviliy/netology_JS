@@ -1,26 +1,20 @@
-import Dwart from './players/Dwart.js';
-import Crossbowman from './players/Crossbowman.js';
-import Demourge from './players/Demourge.js';
-import Warrior from './players/Warrior.js';
-import Archer from './players/Archer.js';
-import Mage from './players/Mage.js';
+export function play(players) {
+    console.log('--- Start the battle! ---');
 
-export function play() {
-    console.log('Game started');
+    while (players.filter((p) => !p.isDead()).length > 1) {
+        for (const p of players) {
+            if (!p.isDead()) {
+                p.turn(players);
+            }
+        }
+        console.log('--- End of round ---');
+    }
 
-    const warrior = new Warrior();
-    const archer = new Archer();
-    const mage = new Mage();
-    const dwart = new Dwart();
-    const crossbowman = new Crossbowman();
-    const demourge = new Demourge();
-
-    console.log('Warrior:', warrior);
-    console.log('Archer:', archer);
-    console.log('Mage:', mage);
-    console.log('Dwart:', dwart);
-    console.log('Crossbowman:', crossbowman);
-    console.log('Demourge:', demourge);
-
-    console.log('Game finished');
+    const alive = players.filter((p) => !p.isDead());
+    if (alive.length === 1) {
+        console.log(`Победил игрок: ${alive[0].name} (${alive[0].description})`);
+        return alive[0];
+    }
+    console.log('Все умерли! Ничья)');
+    return null;
 }
