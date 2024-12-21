@@ -4,7 +4,8 @@
   "description": "THE game",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "webpack --mode production",
+    "serve": "http-server ./dist",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,11 +29,22 @@
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@eslint/js": "^9.17.0",
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
     "eslint": "^9.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "globals": "^15.14.0"
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.14.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "core-js": "^3.39.0"
+    "core-js": "^3.39.0",
+    "http-server": "^14.1.1"
   }
 }
